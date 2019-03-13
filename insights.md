@@ -109,7 +109,100 @@ type Mutation
 
 ### Resolver
 
+Schema is more of Types and return types which is a data type sets of the GraphQL where Resolver acts as function which perform operation on the objects in the schema, in short we can say resolver is a function/query handler on GraphQL queries. as named it resolves types to values.
+
+As we know GraphQL can be implemented in different languages hence the syntax for resolver change, but no matter what language we use resolver has four arguments as follows
+
+{% code-tabs %}
+{% code-tabs-item title="Resolver Signature" %}
+```text
+fieldName(obj, args, context, info) { result }
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% hint style="info" %}
+* **obj/root :** The previous object, which for a field on the root Query type is often not used.
+* **args :** The arguments provided to the field in the GraphQL query.
+* **context :** A value which is provided to every resolver and holds important contextual information like the currently logged in user, or access to a database.
+* **info :** A value which holds field-specific information relevant to the current query as well as the schema details
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="Syntax to define Resolver" %}
+```text
+const resolvers = {
+  Query: {
+    posts() {
+      return posts;
+    }
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Default Resolver in GraphQL will be used if a resolver is not specified for a field.
+
 ### Introspection
 
-This operation is used by client to get details about the GraphQL schema
+This is used to Query GraphQL schema to get details/information of schema, which means type systems and functions of the GraphQL itself.
+
+we can illustrate introspection using following example
+
+{% code-tabs %}
+{% code-tabs-item title="Schema Definition" %}
+```graphql
+type User {
+  id: String
+  name: String
+  birthday: Date
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="Introspection Query" %}
+```graphql
+{
+  __type(name: "User") {
+    name
+    fields {
+      name
+      type {
+        name
+      }
+    }
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="Output of the Introspection query" %}
+```graphql
+{
+  "__type": {
+    "name": "User",
+    "fields": [
+      {
+        "name": "id",
+        "type": { "name": "String" }
+      },
+      {
+        "name": "name",
+        "type": { "name": "String" }
+      },
+      {
+        "name": "birthday",
+        "type": { "name": "Date" }
+      },
+    ]
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+_A separate page will be added on Introspection_
 
