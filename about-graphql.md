@@ -10,7 +10,9 @@ Instead of opting for a revolutionary storage structure or changing the workflow
 
 In a application data model a client is empowered by letting the ask for the data for only what they need by following a syntax. This syntax is called GraphQL.
 
-GraphQL is a query language for API's which can be used on existing data, which describes/understands data with its unique type system which work on variety of data sources. which makes GraphQL as a smart  endpoint.
+GraphQL is a query language for API's which can be used on existing data, which describes/understands data with its unique type system which work on variety of data sources. 
+
+Unlike REST API, GraphQL overcomes REST APIs limitations by fetching only what is needed which makes GraphQL faster effective, fast and also makes application to run effectively on low powered devices. which makes GraphQL as a smart  endpoint.
 
  
 
