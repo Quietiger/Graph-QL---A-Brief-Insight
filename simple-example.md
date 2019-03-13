@@ -103,7 +103,7 @@ const bodyParser = require('body-parser');
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const { makeExecutableSchema } = require('graphql-tools');
 
-// data
+// Defined Data
 const books = [
   {
     title: "Learning GraphQL: Declarative Data Fetching for Modern Web Apps",
@@ -129,12 +129,27 @@ const books = [
 const typeDefs = `
   type Query { books: [Book] }
   type Book { title: String, author: String, publisher: String, year:Int }
+  type Mutation { addbook(title: String, author: String, publisher: String, year:Int): Book }
 `;
 
 // The resolvers
 const resolvers = {
-  Query: { books: () => books },
-};
+  //Query the available books
+  Query: { books: () => books }, 
+  //Mutation to add new book
+  Mutation: {   
+      addbook: (parent,args)=> {
+        //get data from arguments
+          const Book = {
+              title: args.title,
+              author: args.author,
+              publisher: args.publisher,
+              year: args.year
+          }
+          books.push(Book) //Push data to GraphQL
+          return Book
+}
+  }};
 
 // Putting all together
 const schema = makeExecutableSchema({
