@@ -6,5 +6,4 @@
 * [Simple Example](simple-example.md)
 * [Security](security.md)
 * [What NEXT?](what-next.md)
-* [References](references.md)
 
