@@ -1,3 +1,7 @@
+---
+description: Simple GraphQL Implementation in one Node file
+---
+
 # Simple Example
 
 * [ ] Install NodeJS
