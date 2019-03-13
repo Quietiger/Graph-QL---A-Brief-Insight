@@ -178,7 +178,9 @@ save the file and start node by command `node index.js` and open browser and ope
 
 This is what you get!
 
-![http://localhost:3000/graphiql](.gitbook/assets/screenshot-from-2019-03-13-18-06-29.png)
+![First Run Shows Existing Data](.gitbook/assets/screenshot-from-2019-03-13-18-06-29.png)
 
+![Running Mutation](.gitbook/assets/screenshot-from-2019-03-13-20-07-07.png)
 
+![Query to check Mutation](.gitbook/assets/screenshot-from-2019-03-13-20-07-31.png)
 
