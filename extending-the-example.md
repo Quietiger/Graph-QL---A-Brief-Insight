@@ -33,6 +33,8 @@ findbookbytitle: (root,{title}) => {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+![Searching Book by its title](.gitbook/assets/screenshot-from-2019-03-14-15-32-20.png)
+
 {% hint style="success" %}
 We can also extend the search based on different fields
 {% endhint %}
@@ -52,6 +54,8 @@ and mutation for that will be as follows
       })
     }
 ```
+
+![Find Books by published year](.gitbook/assets/screenshot-from-2019-03-14-15-33-42.png)
 
 ### Update a Book data
 
@@ -92,6 +96,12 @@ updatebook: (root,args) => {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+![Data Before Update](.gitbook/assets/screenshot-from-2019-03-14-15-19-09.png)
+
+![Mutation changing data based on Book title](.gitbook/assets/screenshot-from-2019-03-14-15-22-45.png)
+
+![New data After Update](.gitbook/assets/screenshot-from-2019-03-14-15-24-02.png)
+
 ### Delete a Book based by its title
 
 This is also same process find the index of the book and delete it using `Splice()`
@@ -117,10 +127,13 @@ removebook: (root,args) => {
   books.splice(index,1);
   return deletedbook;
  }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+![Remove Book Mutation](.gitbook/assets/screenshot-from-2019-03-14-15-30-18.png)
+
+![Data after deletion](.gitbook/assets/screenshot-from-2019-03-14-15-30-53.png)
 
 
 

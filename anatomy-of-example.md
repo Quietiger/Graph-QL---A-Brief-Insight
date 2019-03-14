@@ -112,3 +112,9 @@ app.listen(3000, () => {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+![Predefined Data for the application](.gitbook/assets/screenshot-from-2019-03-14-15-16-35.png)
+
+![Mutation added new data](.gitbook/assets/screenshot-from-2019-03-14-15-18-32.png)
+
+![](.gitbook/assets/screenshot-from-2019-03-14-15-19-09%20%281%29.png)
+
