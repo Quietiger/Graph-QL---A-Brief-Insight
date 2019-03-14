@@ -1,3 +1,7 @@
+---
+description: This is a Write-up of my learning experiences with GraphQL
+---
+
 # Initial page
 
 ![](.gitbook/assets/image.png)
