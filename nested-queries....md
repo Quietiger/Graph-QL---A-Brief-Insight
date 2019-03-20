@@ -131,3 +131,37 @@ And when you execute the file you should be able get output as shown below
 
 As we can see now we have _**Packt Publishing's**_ id is 200 and they have _**2 books**_ under their publication and both of them are written by _**Samer Buna.**_
 
+{% hint style="warning" %}
+_**As we already related Author to Book we can again use nest for books under author. its ambiguous and confusing but still the relation works!!**_ 
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="Ambiguous" %}
+```javascript
+{
+allpublisher
+  {
+    id
+    name
+    books
+    {
+      title
+      publisher
+      year
+      authors
+      {
+        id
+        name
+        books
+        {
+          title
+          year
+        }
+      }
+    }
+  }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
