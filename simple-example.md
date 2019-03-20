@@ -32,7 +32,7 @@ npm install express --save
 {% hint style="warning" %}
 _**`use sudo if permission is denied for installing a package`**_
 
-_npm init_ creates a `package.json` file which holds all the dependencies for the application and you can also provide the following information to the file during the creation
+_npm init_ creates npm package and adds a `package.json`to keep track of all the dependencies required for the application and you can also provide the following information accordingly during the creation
 
 1. `package name: (testapp)` 
 2. `version: (1.0.0) description:` 
@@ -42,12 +42,9 @@ _npm init_ creates a `package.json` file which holds all the dependencies for th
 6. `keywords:` 
 7. `author:` 
 8. `license: (ISC)` 
-9. `About to write to /home/tiger/testapp/package.json:`
 {% endhint %}
 
 #### Installing Dependencies - Apollo and GraphQL to the application
-
-
 
 {% code-tabs %}
 {% code-tabs-item title="installing Apollo and Apollo Express" %}

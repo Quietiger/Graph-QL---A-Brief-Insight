@@ -204,5 +204,5 @@ type User {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-_A separate page will be added on Introspection_
+_Information on Subscriptions and Introspection will follow soon_
 

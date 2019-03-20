@@ -4,7 +4,7 @@ description: Dissecting example - more info will be added later
 
 # Anatomy of Example
 
-To start with I am not going to add overhead of Database server instead use a session storage as defined below
+To start with I am not going to add overhead of adding a Database server for now but instead I am going to use server session storage, A simple data is stored in index.js which will be accessed by application during its execution
 
 {% code-tabs %}
 {% code-tabs-item title="src/index.js" %}
@@ -32,6 +32,10 @@ const books = [
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+{% hint style="warning" %}
+Any Add/Delete/Update operations are temporary as storage is volatile and used only during run-time
+{% endhint %}
 
 Define Type Definitions which is the GraphQL schema, which defines Book, Query to fetch all books and also mutation to add a book\(this addition is temporary as storage is volatile\)
 
@@ -75,8 +79,6 @@ const resolvers = {
 
 now lets make put schema and resolvers together
 
-
-
 {% code-tabs %}
 {% code-tabs-item title="src/index.js" %}
 ```javascript
@@ -89,8 +91,6 @@ const schema = makeExecutableSchema({
 {% endcode-tabs %}
 
 Now initialize the application, create an endpoint and start the sever
-
-
 
 {% code-tabs %}
 {% code-tabs-item title="src/index.js" %}
