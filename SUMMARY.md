@@ -7,6 +7,6 @@
 * [Extending the example](extending-the-example.md)
 * [Nested Queries](nested-queries.md)
 * [Nested Queries...](nested-queries....md)
-* [Security](security.md)
+* [Security](security-1.md)
 * [What NEXT?](what-next.md)
 
