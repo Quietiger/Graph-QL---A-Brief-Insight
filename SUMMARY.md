@@ -6,6 +6,7 @@
 * [Anatomy of Example](anatomy-of-example.md)
 * [Extending the example](extending-the-example.md)
 * [Nested Queries](nested-queries.md)
+* [Nested Queries...](nested-queries....md)
 * [Security](security.md)
 * [What NEXT?](what-next.md)
 
